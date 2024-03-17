@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encrypt it</title>
+    <link rel="stylesheet" href="/static/styles.css">
+    <script src="https://kit.fontawesome.com/cd7cde004b.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <header class="header">
+        <img src="/static/js_logo1.png" class="logo" alt="Logo">
+
+        <h1 style="font-family:Bradley Hand, cursive">
+            Enc2y9ti0n.c0m
+        </h1>
+        <div class="dark-mode-switch" onclick="toggleDarkMode()">
+            <!-- <img src="/static/dk_logo.jpeg" alt="dark-mode id=" dark-mode"  height='70'> -->
+            <!-- <i class="fa-brands fa-github"></i> -->
+            <!-- <i class="fa-brands fa-github"></i> -->
+            <i class="fa-solid fa-moon fa-xl"></i>
+        </div>
+    </header>
+    <div class="content">
+        <h1>Encrypt and Decrypt in 3 easy steps</h1>
+        <p>
+            <h3>Encrypt your text</h3>
+            Steps to Encrypt your message.<br>1. Decide a secret key. Note: Share it only with people who you allow to read your texts<br> 2. Write your text in the text area below the secret code.<br> 3. Type 1 and Click on Submit!!! and you are good
+            to go.
+            <br><br>
+            <h3>Decrypt your text</h3>
+            Steps to decrypt your message.<br>1. Use the secret key that was used to Encrypt your text <br> 2. Paste the encrypted text <br> 3. Type 2 and Click on Submit!!! <br>
+        </p>
+        <form action="/" method="POST">
+            <label> Secret Key </label>
+            <input type="text" placeholder="Enter secret code here" name="SK">
+            <label> Enter your text here. </label>
+            <textarea id="input-text" placeholder="Enter more text" name="Txt"></textarea>
+            <label> Type 1 To Encrypt</label> <label> Type 2 for Decrypt</label>
+            <br>
+            <input type="text" placeholder="Type 1 or 2 for encrypt or decrypt" name="ED">
+            <button type="submit" class="btn-cypher">Cypher</button>
+        </form>
+        <br>
+        <div class="output">
+            {{result}}
+            <button class="copy-btn" onclick="copyText()"><i class="fa-regular fa-copy"></i></button>
+        </div>
+    </div>
+
+    <script src="/static/script.js"></script>
+</body>
+
+</html>
